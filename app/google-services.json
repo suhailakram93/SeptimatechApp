@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "821672477581",
+    "firebase_url": "https://septimatech-capstone.firebaseio.com",
+    "project_id": "septimatech-capstone",
+    "storage_bucket": "septimatech-capstone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:821672477581:android:4a2972b031aa28b305b3c4",
+        "android_client_info": {
+          "package_name": "com.example.septimatech_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "821672477581-bn7s9baddmvciiaphrkm5pfblnnqqvun.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.septimatech_app",
+            "certificate_hash": "4fbc287ad5c05ac727eda136ec7dde994814a03e"
+          }
+        },
+        {
+          "client_id": "821672477581-ne5r9gb8bjolnbpto74eebm1j8im8ifk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDILoPvgSdfNVwR77ibVD8eG5HJF--toAQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "821672477581-ne5r9gb8bjolnbpto74eebm1j8im8ifk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:821672477581:android:38e7b245fc0c39d105b3c4",
+        "android_client_info": {
+          "package_name": "com.example.septimatechapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "821672477581-6bn5n21j1mco04vbq4ec1atb4e4fhk5n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.septimatechapp",
+            "certificate_hash": "fb7d4e9946b80677240589b54a57b3273022e151"
+          }
+        },
+        {
+          "client_id": "821672477581-ne5r9gb8bjolnbpto74eebm1j8im8ifk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDILoPvgSdfNVwR77ibVD8eG5HJF--toAQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "821672477581-ne5r9gb8bjolnbpto74eebm1j8im8ifk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
