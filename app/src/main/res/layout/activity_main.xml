@@ -9,14 +9,14 @@
 
     <Button
         android:id="@+id/btnSignup"
-        android:layout_width="177dp"
+        android:layout_width="173dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="31dp"
-        android:layout_marginRight="31dp"
-        android:layout_marginBottom="149dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="154dp"
         android:width="25dp"
         android:background="@color/imgcolor"
         android:text="REGISTER"
@@ -36,7 +36,7 @@
         android:layout_marginEnd="22dp"
         android:layout_marginBottom="39dp"
         android:layout_toStartOf="@+id/u_id"
-        android:text="E-mail Id"
+        android:text="@string/email"
         android:textAlignment="viewStart"
         android:textColor="@color/fontscolor"
         android:textSize="20dp"
@@ -52,7 +52,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="320dp"
-        android:text="PASSWORD"
+        android:text="@string/password"
         android:textAlignment="viewStart"
         android:textColor="@color/fontscolor"
         android:textSize="20dp"
@@ -78,14 +78,14 @@
 
     <Button
         android:id="@+id/login"
-        android:layout_width="173dp"
+        android:layout_width="184dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/newU"
         android:layout_alignParentStart="true"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="35dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginBottom="46dp"
         android:layout_toStartOf="@+id/btnFrgt"
         android:layout_toLeftOf="@+id/btnFrgt"
         android:width="25dp"
@@ -97,14 +97,14 @@
 
     <Button
         android:id="@+id/btnFrgt"
-        android:layout_width="179dp"
+        android:layout_width="177dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/btnSignup"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="27dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="35dp"
         android:width="25dp"
         android:background="@color/imgcolor"
         android:text="FORGOT PASSWORD"
@@ -150,49 +150,53 @@
         android:visibility="visible"
         tools:visibility="visible" />
 
-    <ImageView
-        android:id="@+id/linkiden"
-        android:layout_width="30dp"
-        android:layout_height="35dp"
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/log_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="109dp"
-        android:layout_marginRight="109dp"
-        android:layout_marginBottom="91dp"
-        app:srcCompat="@drawable/linkiden" />
-    <ImageView
-        android:id="@+id/facebook"
-        android:layout_width="30dp"
-        android:layout_height="35dp"
-        android:layout_alignParentBottom="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="236dp"
+        android:layout_marginRight="236dp"
+        android:layout_marginBottom="100dp" />
 
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="93dp"
-        android:layout_toStartOf="@+id/linkiden"
-        android:layout_toLeftOf="@+id/linkiden"
-        android:contentDescription="Facebook"
-        app:srcCompat="@drawable/facebook" />
-
-    <TextView
-
-        android:id="@+id/socialMedia"
-        android:layout_width="161dp"
-        android:layout_height="43dp"
+    <Button
+        android:id="@+id/log_out_button"
+        android:layout_width="203dp"
+        android:layout_height="38dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginEnd="-3dp"
-        android:layout_marginRight="-3dp"
-        android:layout_marginBottom="88dp"
-
-        android:text="Sign In with "
+        android:layout_marginStart="114dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginRight="94dp"
+        android:layout_marginBottom="36dp"
+        android:text="Sign Out"
         android:textColor="@color/fontscolor"
-        android:textSize="20dp"
+        android:textSize="15dp"
+        android:visibility="invisible"
         android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/microsoft_button"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="221dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="105dp"
+        android:background="@drawable/microsoft"
+
+        />
 
 
 </RelativeLayout>
