@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.text.TextUtils;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -34,11 +35,11 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
     private SignInButton logInButton;
     private GoogleSignInClient logInClient;
     private  String TAG = "MainActivity";
-    private FirebaseAuth mAuth;
+    private FirebaseAuth mAuth,auth;
     private Button logOutButton;
     private int RC_SIGN_IN = 1;
 
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         logInButton = findViewById(R.id.log_in_button);
         mAuth = FirebaseAuth.getInstance();
+        auth = FirebaseAuth.getInstance();
         logOutButton = findViewById(R.id.log_out_button);
 
 
@@ -81,17 +83,55 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        intentH= new Intent(this,HomePage.class);
-        intentS= new Intent(this,SignUp.class);
+
         username= (EditText) findViewById(R.id.u_id);
         password=(EditText) findViewById(R.id.p_id);
         btnLogin= (Button)findViewById(R.id.login);
         btnForgotPaswrd= (Button)findViewById(R.id.btnFrgt);
         btnSignUp= (Button)findViewById(R.id.btnSignup) ;
-        btnLogin.setOnClickListener(this);
-        btnSignUp.setOnClickListener(this);
-        btnForgotPaswrd.setOnClickListener(this);
+
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),SignUp.class));
+            }
+        });
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String mail = username.getText().toString().trim();
+                String pass = password.getText().toString().trim();
+                if (TextUtils.isEmpty(mail)) {
+                    Toast.makeText(MainActivity.this,"Enter Email",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (TextUtils.isEmpty(pass)) {
+                    Toast.makeText(MainActivity.this,"Enter Password",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (pass.length() < 8) {
+                    Toast.makeText(MainActivity.this,"Minimum 8 characters required",Toast.LENGTH_SHORT).show();
+
+                }
+                auth.signInWithEmailAndPassword(mail,pass).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                           startActivity(new Intent(getApplicationContext(),HomePage.class));
+
+                        }else {
+                            Toast.makeText(MainActivity.this,"Something went wrong",Toast.LENGTH_SHORT).show();
+
+                        }
+                    }
+                });
+
+
+            }
+        });
     }
+
 
     private void logIn() {
         Intent signInIntent = logInClient.getSignInIntent();
@@ -165,26 +205,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    @Override
-    public void onClick(View view) {
 
 
-        switch (view.getId()){
-            case (R.id.login):
-                if (username.getText().toString().trim().isEmpty() ) {
-                    username.setError("please fill the required details");
-                } else if( password.getText().toString().trim().isEmpty()) {
-                    password.setError("please fill the required details");
-                }else {
-                    startActivity(intentH);
-                }
-                break;
 
-            case (R.id.btnSignup):
-                startActivity(intentS);
-                break;
-        }
 
-    }
 }
 
