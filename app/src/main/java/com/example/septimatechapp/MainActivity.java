@@ -28,12 +28,15 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.auth.OAuthProvider;
 
 public class MainActivity extends AppCompatActivity {
     private SignInButton logInButton;
@@ -43,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     private Button logOutButton;
     private int RC_SIGN_IN = 1;
 
-    Button btnLogin,btnSignUp,btnForgotPaswrd;
+    Button btnLogin,btnSignUp,btnForgotPaswrd,microbtn;
     EditText username, password;
     Intent  intentH,intentS;
     ImageButton imageButtonY,imageButtonL,imageButtonF;
@@ -89,6 +92,64 @@ public class MainActivity extends AppCompatActivity {
         btnLogin= (Button)findViewById(R.id.login);
         btnForgotPaswrd= (Button)findViewById(R.id.btnFrgt);
         btnSignUp= (Button)findViewById(R.id.btnSignup) ;
+        microbtn=(Button)findViewById(R.id.microsoft_button);
+        microbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                OAuthProvider.Builder provider = OAuthProvider.newBuilder("microsoft.com");
+                Task<AuthResult> pendingResultTask = auth.getPendingAuthResult();
+                if (pendingResultTask != null) {
+                    // There's something already here! Finish the sign-in for your user.
+                    pendingResultTask
+                            .addOnSuccessListener(
+                                    new OnSuccessListener<AuthResult>() {
+                                        @Override
+                                        public void onSuccess(AuthResult authResult) {
+                                            // User is signed in.
+                                            // IdP data available in
+                                            // authResult.getAdditionalUserInfo().getProfile().
+                                            // The OAuth access token can also be retrieved:
+                                            // authResult.getCredential().getAccessToken().
+                                            // The OAuth ID token can also be retrieved:
+                                            // authResult.getCredential().getIdToken().
+                                        }
+                                    })
+                            .addOnFailureListener(
+                                    new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception e) {
+                                            // Handle failure.
+                                        }
+                                    });
+                } else {
+                    // There's no pending result so you need to start the sign-in flow.
+                    // See below.
+                    auth
+                            .startActivityForSignInWithProvider(/* activity= */ MainActivity.this, provider.build())
+                            .addOnSuccessListener(
+                                    new OnSuccessListener<AuthResult>() {
+                                        @Override
+                                        public void onSuccess(AuthResult authResult) {
+                                            startActivity(new Intent(getApplicationContext(),HomePage.class));
+
+                                        }
+                                    })
+                            .addOnFailureListener(
+                                    new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception e) {
+                                            Toast.makeText(MainActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
+
+                                        }
+                                    });
+                }
+
+
+
+
+
+            }
+        });
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -183,7 +244,7 @@ public class MainActivity extends AppCompatActivity {
             });
         }
         else{
-            Toast.makeText(MainActivity.this, "acc failed", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
         }
     }
 

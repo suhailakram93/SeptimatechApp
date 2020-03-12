@@ -39,7 +39,7 @@ public class SignUp extends  AppCompatActivity {
         regbtn = (Button) findViewById(R.id.buttonRegister);
         fauth = FirebaseAuth.getInstance();
 
-      
+
 
         regbtn.setOnClickListener(new View.OnClickListener() {
             @Override
