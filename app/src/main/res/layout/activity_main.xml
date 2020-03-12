@@ -150,19 +150,19 @@
         android:visibility="visible"
         tools:visibility="visible" />
 
+
     <com.google.android.gms.common.SignInButton
         android:id="@+id/log_in_button"
-        android:layout_width="203dp"
-        android:layout_height="38dp"
+        android:layout_width="201dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="114dp"
-        android:layout_marginEnd="94dp"
-        android:layout_marginRight="94dp"
-        android:layout_marginBottom="83dp"
-        android:background="@color/imgcolor"/>
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="236dp"
+        android:layout_marginRight="236dp"
+        android:layout_marginBottom="83dp" />
 
     <Button
         android:id="@+id/log_out_button"
@@ -181,6 +181,22 @@
         android:textSize="15dp"
         android:visibility="invisible"
         android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/microsoft_button"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="253dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginRight="29dp"
+        android:layout_marginBottom="85dp"
+        android:background="@drawable/microsoft"
+
+        />
 
 
 </RelativeLayout>
