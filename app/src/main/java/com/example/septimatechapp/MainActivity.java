@@ -178,7 +178,11 @@ public class MainActivity extends AppCompatActivity {
                 auth.signInWithEmailAndPassword(mail,pass).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
+                        if (username.getText().toString().equals("c@gmail.com")) {
+                            startActivity(new Intent(getApplicationContext(),AboutUs.class));
+
+                        }
+                        else if(task.isSuccessful()){
                            startActivity(new Intent(getApplicationContext(),HomePage.class));
 
                         }else {
@@ -230,6 +234,7 @@ public class MainActivity extends AppCompatActivity {
             mAuth.signInWithCredential(authCredential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
+
                     if (task.isSuccessful()) {
                         Toast.makeText(MainActivity.this, "Successful", Toast.LENGTH_SHORT).show();
 
