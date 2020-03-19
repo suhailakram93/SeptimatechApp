@@ -179,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (username.getText().toString().equals("c@gmail.com")) {
-                            startActivity(new Intent(getApplicationContext(),AboutUs.class));
+                            startActivity(new Intent(getApplicationContext(),Adminmain.class));
 
                         }
                         else if(task.isSuccessful()){
