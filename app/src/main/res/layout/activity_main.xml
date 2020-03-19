@@ -145,10 +145,15 @@
         android:background="@drawable/rectangle"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textColor="#F6FAF9"
+
         android:textColorHighlight="#F6FAF9"
         android:visibility="visible"
-        tools:visibility="visible" />
+        tools:visibility="visible"
+        android:fontFamily="serif"
+
+        android:textColor="@color/fontscolor"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
 
     <com.google.android.gms.common.SignInButton
