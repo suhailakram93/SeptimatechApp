@@ -37,7 +37,11 @@
         android:background="@drawable/rectangle"
         android:ems="10"
         android:inputType="textPassword"
-        android:textColor="#F6FAF9"
+        android:fontFamily="serif"
+
+        android:textColor="@color/fontscolor"
+        android:textSize="20dp"
+        android:textStyle="bold"
         android:textColorHighlight="#F6FAF9"
         android:visibility="visible"
         tools:visibility="visible" />
@@ -70,7 +74,11 @@
         android:background="@drawable/rectangle"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textColor="#F6FAF9" />
+        android:fontFamily="serif"
+
+        android:textColor="@color/fontscolor"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/emailText"
@@ -104,7 +112,11 @@
         android:background="@drawable/rectangle"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:textColor="#F6FAF9" />
+        android:fontFamily="serif"
+
+        android:textColor="@color/fontscolor"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/password"
@@ -119,7 +131,11 @@
         android:background="@drawable/rectangle"
         android:ems="10"
         android:inputType="textPassword"
-        android:textColor="#F6FAF9"
+        android:fontFamily="serif"
+
+        android:textColor="@color/fontscolor"
+        android:textSize="20dp"
+        android:textStyle="bold"
         android:visibility="visible"
         tools:visibility="visible" />
 
@@ -138,7 +154,7 @@
         android:layout_marginBottom="152dp"
         android:layout_toStartOf="@+id/rePassword"
         android:layout_toLeftOf="@+id/rePassword"
-        android:text="Confirm Password*"
+        android:text="Re-enter*"
         android:textColor="@color/fontscolor"
         android:textSize="20dp"
         android:textStyle="bold"
