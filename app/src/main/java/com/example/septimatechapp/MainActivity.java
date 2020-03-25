@@ -38,6 +38,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.auth.OAuthProvider;
 
+import static com.example.septimatechapp.R.layout.activity_main;
+
 public class MainActivity extends AppCompatActivity {
     private SignInButton logInButton;
     private GoogleSignInClient logInClient;
@@ -54,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(activity_main);
         logInButton = findViewById(R.id.log_in_button);
         mAuth = FirebaseAuth.getInstance();
         auth = FirebaseAuth.getInstance();
