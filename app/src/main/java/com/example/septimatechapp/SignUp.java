@@ -24,7 +24,6 @@ public class SignUp extends  AppCompatActivity {
     Button regbtn;
     FirebaseAuth fauth;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,8 +37,6 @@ public class SignUp extends  AppCompatActivity {
         repass = (EditText) findViewById(R.id.rePassword);
         regbtn = (Button) findViewById(R.id.buttonRegister);
         fauth = FirebaseAuth.getInstance();
-
-
 
         regbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,10 +79,6 @@ public class SignUp extends  AppCompatActivity {
                     });
 
                 }
-
-
-
-
             }
         });
     }}

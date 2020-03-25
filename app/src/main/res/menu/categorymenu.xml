@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.SeptimatechApp.AdminHome">
+
+    <item
+        android:id="@+id/RXNT"
+        android:title="RXNT" />
+    <item
+        android:id="@+id/OEM"
+        android:title="OEM" />
+    <item
+        android:id="@+id/CapHanding"
+        android:title="Cap Handing" />
+    <item
+        android:id="@+id/LabelHandling"
+        android:title="Label Handling" />
+    <item
+        android:id="@+id/SpecialApp"
+        android:title="Special Applications" />
 
 </menu>

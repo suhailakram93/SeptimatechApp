@@ -145,11 +145,6 @@ public class MainActivity extends AppCompatActivity {
                                         }
                                     });
                 }
-
-
-
-
-
             }
         });
 
@@ -193,8 +188,6 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 });
-
-
             }
         });
     }
@@ -203,10 +196,8 @@ public class MainActivity extends AppCompatActivity {
     private void logIn() {
         Intent signInIntent = logInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
-
-
-
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -271,11 +262,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-
-
-
-
-
-
 }
 

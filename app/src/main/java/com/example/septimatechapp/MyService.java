@@ -45,12 +45,7 @@ public class MyService extends FirebaseMessagingService {
         if (remoteMessage.getNotification() != null) {
             Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
         }
-
-
-
     }
-
-
 
     private void handleNow() {
     }
