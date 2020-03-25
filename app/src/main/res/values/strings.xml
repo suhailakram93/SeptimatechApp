@@ -2,4 +2,31 @@
     <string name="app_name">Septimatech App</string>
     <string name="email">Email*</string>
     <string name="password">Password*</string>
+    <string name="view_products">View Products</string>
+    <string name="title">Select Category</string>
+    <string name="RXNT">1-RXNT and OEM Changeparts</string>
+    <string name="FeedScrew">2-Feed Screws and Drive Systems</string>
+    <string name="SmartStorage">3-Smart Storage System</string>
+    <string name="EasyAdj">4-Easy Adjust Rail</string>
+    <string name="MultiLane">5-Multi Lane Adjust</string>
+    <string name="Unison">6-Unison Guide Rails</string>
+    <string name="UnisonAuto">7-Unison Automation</string>
+    <string name="UniCap">8-Unison Cap Tracks</string>
+    <string name="Thumbs">Thumbs</string>
+    <string name="Videos">Videos</string>
+
+
+
+    <string-array name="Categories">
+        <item>1-RXNT and OEM Changeparts</item>
+        <item>2-Feedscrews and Drive Systems</item>
+        <item>3-Smart Storage System</item>
+        <item>4-Easy Adjust Rails</item>
+        <item>5-Multi Lane Adjust</item>
+        <item>6-Unison Guide Rails</item>
+        <item>7-Unison Automation</item>
+        <item>8-Unison Cap Tracks</item>
+        <item>Videos</item>
+    </string-array>
+        
 </resources>

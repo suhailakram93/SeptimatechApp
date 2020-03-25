@@ -25,5 +25,4 @@ public class GettingDeviceTokenService extends FirebaseMessagingService {
 
     private void sendRegistrationToServer(String token) {
     }
-
 }

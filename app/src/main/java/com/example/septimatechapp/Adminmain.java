@@ -1,6 +1,5 @@
 package com.example.septimatechapp;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -36,10 +35,8 @@ public class Adminmain extends AppCompatActivity {
                         else if(item.getItemId() == R.id.products){
                             startActivity(new Intent(getApplicationContext(), productsadminupdate.class));
                             Toast.makeText(Adminmain.this,"Products",Toast.LENGTH_SHORT).show();
-
                         }
                         popupMenu.dismiss();
-
                         return true;
                     }
 
