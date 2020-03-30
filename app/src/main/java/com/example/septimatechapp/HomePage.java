@@ -58,7 +58,6 @@ public class HomePage extends basicMenu {
                 categorymenu.show();
             }
         });
-
     }
 }
 
