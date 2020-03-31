@@ -1,9 +1,9 @@
 package com.example.septimatechapp;
 
 import android.content.Context;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
+        import android.view.View;
+        import android.view.ViewGroup;
+        import android.widget.BaseAdapter;
 
 public class Rxnt extends BaseAdapter {
 
