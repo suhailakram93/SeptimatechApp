@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Septimatech App.iml" filepath="$PROJECT_DIR$/Septimatech App.iml" group="Septimatech App" />
-      <module fileurl="file://$PROJECT_DIR$/app/SeptimatechAppU-app.iml" filepath="$PROJECT_DIR$/app/SeptimatechAppU-app.iml" group="Septimatech App/app" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Septimatech_App.iml" filepath="$PROJECT_DIR$/.idea/Septimatech_App.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Septimatech App/app" />
     </modules>
