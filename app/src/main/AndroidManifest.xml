@@ -29,6 +29,9 @@
             android:name=".HomePage"
             android:label="Home page" />
         <activity
+            android:name=".Rxnt"
+            android:label="Rxnt" />
+        <activity
             android:name=".Categories"
             android:label="Categories"
             android:parentActivityName=".HomePage" />
