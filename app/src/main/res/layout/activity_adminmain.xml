@@ -11,7 +11,7 @@
     <RelativeLayout
         android:id="@+id/innerlayout"
         android:layout_width="296dp"
-        android:layout_height="248dp"
+        android:layout_height="275dp"
         android:layout_below="@id/mainlayout"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
@@ -19,22 +19,43 @@
         android:layout_marginStart="62dp"
         android:layout_marginTop="-308dp"
         android:layout_marginEnd="53dp"
-        android:layout_marginBottom="60dp">
+        android:layout_marginBottom="54dp">
 
         <Button
             android:id="@+id/delete"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@id/update"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="121dp"
             android:background="@color/imgcolor"
             android:fontFamily="serif"
-            android:text="Delete"
+            android:text="@string/delete"
             android:textColor="@color/fontscolor"
             android:textSize="15dp"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="150dp"
             tools:layout_editor_absoluteY="530dp" />
+
+        <Button
+            android:id="@+id/upload"
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:layout_above="@+id/update"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="96dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="-170dp"
+            android:background="@color/imgcolor"
+            android:fontFamily="serif"
+            android:text="@string/upload"
+            android:textColor="@color/fontscolor"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="143dp"
+            tools:layout_editor_absoluteY="451dp" />
 
         <Button
             android:id="@+id/update"
@@ -48,37 +69,30 @@
             android:textStyle="bold"
             tools:layout_editor_absoluteX="143dp"
             tools:layout_editor_absoluteY="451dp" />
+
+
     </RelativeLayout>
 
     <TextView
         android:id="@+id/adminmsg"
         android:layout_width="280dp"
         android:layout_height="46dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="266dp"
-        android:layout_marginEnd="69dp"
-        android:layout_marginBottom="419dp"
-        android:text="Welcome Amin!"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="-123dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="398dp"
+        android:text="@string/adminMsg"
         android:textColor="@color/fontscolor"
         android:textSize="35dp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="301dp"
-        android:layout_height="44dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="356dp"
-        android:layout_marginEnd="53dp"
-        android:layout_marginBottom="330dp"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="-55dp"
+        android:layout_marginEnd="82dp"
         android:text="Press to proceed"
         android:textColor="@color/fontscolor"
         android:textSize="20dp"

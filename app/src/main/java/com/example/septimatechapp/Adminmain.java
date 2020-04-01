@@ -10,13 +10,21 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class Adminmain extends AppCompatActivity {
     Button updatemenu;
+    Button uploadimg;
+
+//    DatabaseReference dbreff;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adminmain);
+
+//        dbreff = FirebaseDatabase.getInstance();
 
         updatemenu = findViewById(R.id.update);
         updatemenu.setOnClickListener(new View.OnClickListener() {

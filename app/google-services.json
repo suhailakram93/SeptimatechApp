@@ -52,11 +52,35 @@
       },
       "oauth_client": [
         {
+          "client_id": "821672477581-l8mjn4h0fna20hk9nts7ek0d3usa0dbr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.septimatechapp",
+            "certificate_hash": "2fbd7045b4464a4d4fe5c4edd05c1728b4a4ee86"
+          }
+        },
+        {
+          "client_id": "821672477581-4ka74o6ki2rst667652ulcef1tq4aotn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.septimatechapp",
+            "certificate_hash": "1ffe885a160f59deb711f7c8fcc071fe16bb66df"
+          }
+        },
+        {
           "client_id": "821672477581-6bn5n21j1mco04vbq4ec1atb4e4fhk5n.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.septimatechapp",
             "certificate_hash": "fb7d4e9946b80677240589b54a57b3273022e151"
+          }
+        },
+        {
+          "client_id": "821672477581-57bgb77ojel5n138tcfan74asrjvt4ll.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.septimatechapp",
+            "certificate_hash": "4fbc287ad5c05ac727eda136ec7dde994814a03e"
           }
         },
         {
