@@ -6,4 +6,192 @@
 
 
     <include layout="@layout/content_main" />
+
+    <TextView
+        android:id="@+id/tvtitle"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="267dp"
+        android:layout_marginBottom="463dp"
+        android:background="@color/imgcolor"
+        android:fontFamily="serif"
+        android:text="@string/title"
+        android:textColor="@color/fontscolor"
+        android:textSize="17dp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/RXNT"
+        android:layout_width="240dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="431dp"
+        android:background="@color/imgcolor"
+        android:fontFamily="serif"
+        android:text="@string/RXNT"
+        android:textColor="@color/fontscolor"
+        android:textSize="10dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/FeedScrew"
+        android:layout_width="240dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="401dp"
+        android:background="@color/imgcolor"
+        android:fontFamily="serif"
+        android:text="@string/FeedScrew"
+        android:textColor="@color/fontscolor"
+        android:textSize="10dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/SmartStorage"
+        android:layout_width="240dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="373dp"
+        android:background="@color/imgcolor"
+        android:fontFamily="serif"
+        android:text="@string/SmartStorage"
+        android:textColor="@color/fontscolor"
+        android:textSize="10dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/EasyAdj"
+        android:layout_width="240dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="346dp"
+        android:background="@color/imgcolor"
+        android:fontFamily="serif"
+        android:text="@string/EasyAdj"
+        android:textColor="@color/fontscolor"
+        android:textSize="10dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/MultiLane"
+        android:layout_width="240dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="316dp"
+        android:background="@color/imgcolor"
+        android:fontFamily="serif"
+        android:text="@string/MultiLane"
+        android:textColor="@color/fontscolor"
+        android:textSize="10dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/Unison"
+        android:layout_width="240dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="288dp"
+        android:background="@color/imgcolor"
+        android:fontFamily="serif"
+        android:text="@string/Unison"
+        android:textColor="@color/fontscolor"
+        android:textSize="10dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/UnisonAuto"
+        android:layout_width="240dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="260dp"
+        android:background="@color/imgcolor"
+        android:fontFamily="serif"
+        android:text="@string/UnisonAuto"
+        android:textColor="@color/fontscolor"
+        android:textSize="10dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/UniCap"
+        android:layout_width="240dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="232dp"
+        android:background="@color/imgcolor"
+        android:fontFamily="serif"
+        android:text="@string/UniCap"
+        android:textColor="@color/fontscolor"
+        android:textSize="10dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/Thumbs"
+        android:layout_width="240dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="205dp"
+        android:background="@color/imgcolor"
+        android:fontFamily="serif"
+        android:text="@string/Thumbs"
+        android:textColor="@color/fontscolor"
+        android:textSize="10dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/Videos"
+        android:layout_width="240dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="179dp"
+        android:background="@color/imgcolor"
+        android:fontFamily="serif"
+        android:text="@string/Videos"
+        android:textColor="@color/fontscolor"
+        android:textSize="10dp"
+        android:textStyle="bold" />
+
 </RelativeLayout>
