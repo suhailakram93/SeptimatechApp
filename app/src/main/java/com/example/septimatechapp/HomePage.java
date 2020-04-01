@@ -31,8 +31,8 @@ public class HomePage extends basicMenu {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
                         if (item.getItemId() == R.id.RXNT) {
-                            startActivity(new Intent(getApplicationContext(), Categories.class));
-                            Toast.makeText(HomePage.this, "1. RXNT", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), Rxnt.class));
+                           // Toast.makeText(HomePage.this, "1. RXNT", Toast.LENGTH_SHORT).show();
                         } else if (item.getItemId() == R.id.OEM) {
                             startActivity(new Intent(getApplicationContext(), productsadminupdate.class));
                             Toast.makeText(HomePage.this, "2. OEM", Toast.LENGTH_SHORT).show();
