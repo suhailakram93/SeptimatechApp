@@ -1,7 +1,6 @@
 package com.example.septimatechapp;
 
 
-
 import android.content.Context;
 
 
@@ -38,7 +37,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyHolder
     @NonNull
     @Override
     public MyHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.productstemplate,viewGroup,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.productstemplate, viewGroup, false);
         return new MyHolder(view);
     }
 
@@ -46,33 +45,26 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyHolder
     public void onBindViewHolder(@NonNull final MyHolder myHolder, final int i) {
 
         //String pId=postList.get(i).getpId();
-        String pName=postList.get(i).getpName();
-        final String pImage=postList.get(i).getpImage();
+        String pName = postList.get(i).getpName();
+        final String pImage = postList.get(i).getpImage();
 
 
         myHolder.utext.setText(pName);
 
 
-            try{
-                Picasso.with(context).load(pImage).into(myHolder.uimage);
-            }
-            catch (Exception e) {
+        try {
+            Picasso.with(context).load(pImage).into(myHolder.uimage);
+        } catch (Exception e) {
 
-            }
-
-
+        }
     }
-
-
-
-
 
     @Override
     public int getItemCount() {
         return postList.size();
     }
 
-    class MyHolder extends RecyclerView.ViewHolder{
+    class MyHolder extends RecyclerView.ViewHolder {
 
         ImageView uimage;
         TextView utext;
@@ -82,10 +74,9 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyHolder
             super(itemView);
 
 
-            uimage=itemView.findViewById(R.id.productimg);
-            utext=itemView.findViewById(R.id.producttext);
+            uimage = itemView.findViewById(R.id.productimg);
+            utext = itemView.findViewById(R.id.producttext);
 
         }
     }
-
 }

@@ -7,8 +7,8 @@ import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-        import android.view.ViewGroup;
-        import android.widget.BaseAdapter;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,7 +33,7 @@ import java.util.List;
 
 public class Rxnt extends AppCompatActivity {
 
-     RecyclerView recyclerView;
+    RecyclerView recyclerView;
     List<ModelProducts> postList;
     ProductAdapter adapterPost;
 
@@ -42,13 +42,8 @@ public class Rxnt extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.rxnt);
 
-
-
-
-
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
-        GridLayoutManager layoutManager =new GridLayoutManager(Rxnt.this , 2);
-
+        GridLayoutManager layoutManager = new GridLayoutManager(Rxnt.this, 2);
 
         //layoutManager.setStackFromEnd(true);
         //layoutManager.setReverseLayout(true);
@@ -58,41 +53,36 @@ public class Rxnt extends AppCompatActivity {
         postList = new ArrayList<>();
 
         loadPosts();
-
-
     }
 
     private void loadPosts() {
-        DatabaseReference ref= FirebaseDatabase.getInstance().getReference("Products/Categories/1-RXNT and OEM Changeparts/1- RXNT");
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Products/Categories/1-RXNT and OEM Changeparts/1- RXNT");
 
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 postList.clear();
-                Toast.makeText(Rxnt.this,"test",Toast.LENGTH_SHORT).show();
+                Toast.makeText(Rxnt.this, "test", Toast.LENGTH_SHORT).show();
 
-                for (DataSnapshot ds: dataSnapshot.getChildren()){
+                for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     ModelProducts value = ds.getValue(ModelProducts.class);
                     postList.add(value);
 
-                    adapterPost = new ProductAdapter(Rxnt.this,postList);
-                    Toast.makeText(Rxnt.this,"test",Toast.LENGTH_SHORT).show();
+                    adapterPost = new ProductAdapter(Rxnt.this, postList);
+                    Toast.makeText(Rxnt.this, "test", Toast.LENGTH_SHORT).show();
 
                     recyclerView.setAdapter(adapterPost);
-                    Toast.makeText(Rxnt.this,"check",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Rxnt.this, "check", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-//in case od errorpos
-                Toast.makeText(Rxnt.this, ""+ databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+                //In case od errorpos
+                Toast.makeText(Rxnt.this, "" + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
-
-
-
 
 
 }

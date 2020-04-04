@@ -30,19 +30,18 @@ public class Adminmain extends AppCompatActivity {
         updatemenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final PopupMenu popupMenu = new PopupMenu(Adminmain.this,updatemenu);
-                popupMenu.getMenuInflater().inflate(R.menu.popupmenu,popupMenu.getMenu());
+                final PopupMenu popupMenu = new PopupMenu(Adminmain.this, updatemenu);
+                popupMenu.getMenuInflater().inflate(R.menu.popupmenu, popupMenu.getMenu());
 
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
-                        if (item.getItemId() == R.id.feeds){
+                        if (item.getItemId() == R.id.feeds) {
                             startActivity(new Intent(getApplicationContext(), feedsadmin.class));
-                            Toast.makeText(Adminmain.this,"Feeds",Toast.LENGTH_SHORT).show();
-                        }
-                        else if(item.getItemId() == R.id.products){
+                            Toast.makeText(Adminmain.this, "Feeds", Toast.LENGTH_SHORT).show();
+                        } else if (item.getItemId() == R.id.products) {
                             startActivity(new Intent(getApplicationContext(), productsadminupdate.class));
-                            Toast.makeText(Adminmain.this,"Products",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Adminmain.this, "Products", Toast.LENGTH_SHORT).show();
                         }
                         popupMenu.dismiss();
                         return true;
