@@ -33,18 +33,15 @@ public class Categories extends basicMenu {
                         } else if (item.getItemId() == R.id.OEM) {
                             startActivity(new Intent(getApplicationContext(), productsadminupdate.class));
                             Toast.makeText(Categories.this, "2. OEM", Toast.LENGTH_SHORT).show();
-                        }
-                        else if(item.getItemId() == R.id.CapHanding){
+                        } else if (item.getItemId() == R.id.CapHanding) {
                             startActivity(new Intent(getApplicationContext(), productsadminupdate.class));
-                            Toast.makeText(Categories.this,"3. Cap Handling",Toast.LENGTH_SHORT).show();
-                        }
-                        else if(item.getItemId() == R.id.LabelHandling){
+                            Toast.makeText(Categories.this, "3. Cap Handling", Toast.LENGTH_SHORT).show();
+                        } else if (item.getItemId() == R.id.LabelHandling) {
                             startActivity(new Intent(getApplicationContext(), productsadminupdate.class));
-                            Toast.makeText(Categories.this,"4. Label Handling",Toast.LENGTH_SHORT).show();
-                        }
-                        else if(item.getItemId() == R.id.SpecialApp){
+                            Toast.makeText(Categories.this, "4. Label Handling", Toast.LENGTH_SHORT).show();
+                        } else if (item.getItemId() == R.id.SpecialApp) {
                             startActivity(new Intent(getApplicationContext(), productsadminupdate.class));
-                            Toast.makeText(Categories.this,"5. Special Application",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Categories.this, "5. Special Application", Toast.LENGTH_SHORT).show();
                         }
                         categorymenu.dismiss();
 

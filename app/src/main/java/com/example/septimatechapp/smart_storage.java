@@ -7,9 +7,6 @@ import android.widget.BaseAdapter;
 
 public class smart_storage extends BaseAdapter {
 
-
-
-
     private Context SContext;
 
 
