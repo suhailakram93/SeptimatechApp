@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -62,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         logOutButton = findViewById(R.id.log_out_button);
 
-
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -87,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
                 logOutButton.setVisibility(View.INVISIBLE);
             }
         });
-
 
         username = (EditText) findViewById(R.id.u_id);
         password = (EditText) findViewById(R.id.p_id);
@@ -145,6 +142,13 @@ public class MainActivity extends AppCompatActivity {
                                         }
                                     });
                 }
+            }
+        });
+
+        btnForgotPaswrd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), ResetPassword.class));
             }
         });
 
