@@ -8,6 +8,9 @@
     <string name="update">Update</string>
     <string name="delete">Delete</string>
     <string name="adminMsg">Welcome Admin!</string>
+    <string name="forgetPass">FORGOT PASSWORD</string>
+    <string name="emailtext">Enter your Email</string>
+    <string name="resetpassword">Send Email</string>
 
     <string name="RXNT">1-RXNT and OEM Changeparts</string>
     <string name="FeedScrew">2-Feed Screws and Drive Systems</string>
@@ -21,7 +24,6 @@
     <string name="Videos">Videos</string>
 
 
-
     <string-array name="Categories">
         <item>1-RXNT and OEM Changeparts</item>
         <item>2-Feedscrews and Drive Systems</item>
@@ -33,5 +35,5 @@
         <item>8-Unison Cap Tracks</item>
         <item>Videos</item>
     </string-array>
-        
+
 </resources>

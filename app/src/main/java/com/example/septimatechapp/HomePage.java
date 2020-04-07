@@ -30,7 +30,7 @@ public class HomePage extends basicMenu {
     ListView lvRss;
     ArrayList<String> titles;
     ArrayList<String> links;
-    ArrayList<String> pubDate;
+//    ArrayList<String> pubDate;
 
     //    @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,14 +45,13 @@ public class HomePage extends basicMenu {
 
         links = new ArrayList<String>();
 
-        pubDate = new ArrayList<String>();
+//        pubDate = new ArrayList<String>();
 
         lvRss.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
-            {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Uri uri = Uri.parse(links.get(position));
-                Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }
         });
