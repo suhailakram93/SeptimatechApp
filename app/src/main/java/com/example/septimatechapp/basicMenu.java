@@ -10,9 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class basicMenu extends AppCompatActivity {
     Intent intentCategories, intentAboutUs, intentMain;
 
-
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {                  //created menu option to go Report and View report
         getMenuInflater().inflate(R.menu.menu_main, menu);

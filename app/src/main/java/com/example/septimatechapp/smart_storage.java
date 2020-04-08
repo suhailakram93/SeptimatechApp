@@ -68,7 +68,7 @@ public class smart_storage extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                //In case od errorpos
+                //In case od error position
                 Toast.makeText(smart_storage.this, "" + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });

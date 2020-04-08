@@ -1,10 +1,6 @@
 package com.example.septimatechapp;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -30,7 +26,9 @@ public class feedscrews_drivesystems extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.rxnt);
+        setContentView(R.layout.feedscrews_drivesystems);
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         GridLayoutManager layoutManager = new GridLayoutManager(feedscrews_drivesystems.this, 2);

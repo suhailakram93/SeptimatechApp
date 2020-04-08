@@ -48,9 +48,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyHolder
         String pName = postList.get(i).getpName();
         final String pImage = postList.get(i).getpImage();
 
-
         myHolder.utext.setText(pName);
-
 
         try {
             Picasso.with(context).load(pImage).into(myHolder.uimage);
@@ -72,11 +70,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyHolder
 
         public MyHolder(@NonNull View itemView) {
             super(itemView);
-
-
             uimage = itemView.findViewById(R.id.productimg);
             utext = itemView.findViewById(R.id.producttext);
-
         }
     }
 }

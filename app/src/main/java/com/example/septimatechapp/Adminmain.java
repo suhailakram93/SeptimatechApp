@@ -31,11 +31,11 @@ public class Adminmain extends AppCompatActivity {
         del_btn = findViewById(R.id.delete);
         updatemenu.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) {                   //Button redirected to Firebase - Storage
                 Intent viewIntent =
                         new Intent("android.intent.action.VIEW",
                                 Uri.parse("https://console.firebase.google.com/u/0/project/septimatech-capstone/storage/septimatech-capstone.appspot.com/files~2FCategories%20"));
-                        startActivity(viewIntent);
+                startActivity(viewIntent);
             }
         });
 

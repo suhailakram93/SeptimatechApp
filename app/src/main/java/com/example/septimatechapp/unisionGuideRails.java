@@ -1,10 +1,6 @@
 package com.example.septimatechapp;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -30,7 +26,10 @@ public class unisionGuideRails extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.rxnt);
+
+        setContentView(R.layout.unision_guide_rails);
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         GridLayoutManager layoutManager = new GridLayoutManager(unisionGuideRails.this, 2);
@@ -65,7 +64,7 @@ public class unisionGuideRails extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                //In case od error position
+                //In case od error positions
                 Toast.makeText(unisionGuideRails.this, "" + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });

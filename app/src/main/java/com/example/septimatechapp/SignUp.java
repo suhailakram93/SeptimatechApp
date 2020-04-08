@@ -19,8 +19,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-public class SignUp extends  AppCompatActivity {
-    EditText name,email,pword,repass;
+public class SignUp extends AppCompatActivity {
+    EditText name, email, pword, repass;
     Button regbtn;
     FirebaseAuth fauth;
 
@@ -43,28 +43,28 @@ public class SignUp extends  AppCompatActivity {
             public void onClick(View view) {
 
                 String mail = email.getText().toString().trim();
-                 String pass = pword.getText().toString().trim();
-                 String rpass = repass.getText().toString().trim();
+                String pass = pword.getText().toString().trim();
+                String rpass = repass.getText().toString().trim();
 
                 if (TextUtils.isEmpty(mail)) {
-                    Toast.makeText(SignUp.this,"Enter Email",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUp.this, "Enter Email", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (TextUtils.isEmpty(pass)) {
-                    Toast.makeText(SignUp.this,"Enter Password",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUp.this, "Enter Password", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (TextUtils.isEmpty(rpass)) {
-                    Toast.makeText(SignUp.this,"Re-enter Password",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUp.this, "Re-enter Password", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (pass.length() < 8) {
-                    Toast.makeText(SignUp.this,"Minimum 8 characters required",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUp.this, "Minimum 8 characters required", Toast.LENGTH_SHORT).show();
 
                 }
 
-                if(pass.equals(rpass)){
-                    fauth.createUserWithEmailAndPassword(mail, pass).addOnCompleteListener(SignUp.this,new OnCompleteListener<AuthResult>() {
+                if (pass.equals(rpass)) {
+                    fauth.createUserWithEmailAndPassword(mail, pass).addOnCompleteListener(SignUp.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
@@ -81,4 +81,5 @@ public class SignUp extends  AppCompatActivity {
                 }
             }
         });
-    }}
+    }
+}
