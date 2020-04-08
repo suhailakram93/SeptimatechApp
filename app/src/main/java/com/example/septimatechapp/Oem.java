@@ -28,9 +28,9 @@ public class Oem extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.rxnt);
+        setContentView(R.layout.oem);
 
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerview1);
         GridLayoutManager layoutManager = new GridLayoutManager(Oem.this, 2);
 
         recyclerView.setLayoutManager(layoutManager);
