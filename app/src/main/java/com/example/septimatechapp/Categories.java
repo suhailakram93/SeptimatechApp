@@ -34,7 +34,7 @@ public class Categories extends basicMenu {
                             startActivity(new Intent(getApplicationContext(), Rxnt.class));
                             // Toast.makeText(HomePage.this, "1. RXNT", Toast.LENGTH_SHORT).show();
                         } else if (item.getItemId() == R.id.OEM) {
-                            startActivity(new Intent(getApplicationContext(), productsadminupdate.class));
+                            startActivity(new Intent(getApplicationContext(), Oem.class));
                             Toast.makeText(Categories.this, "2. OEM", Toast.LENGTH_SHORT).show();
                         } else if (item.getItemId() == R.id.CapHanding) {
                             startActivity(new Intent(getApplicationContext(), productsadminupdate.class));

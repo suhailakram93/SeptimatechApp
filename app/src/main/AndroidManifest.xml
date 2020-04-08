@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".ResetPassword" />
         <activity android:name=".Adminmain" />
         <activity android:name=".productsadminupdate" />
@@ -28,6 +29,12 @@
         <activity
             android:name=".HomePage"
             android:label="Home page" />
+        <activity
+            android:name=".CapHandling"
+            android:label="caphandling" />
+        <activity
+            android:name=".Oem"
+            android:label="Oem" />
         <activity
             android:name=".Rxnt"
             android:label="Rxnt" />
@@ -58,12 +65,10 @@
         <activity
             android:name=".videos"
             android:label="Videos" />
-
         <activity
             android:name=".Categories"
             android:label="Categories"
             android:parentActivityName=".HomePage" />
-
         <activity
             android:name=".Products"
             android:label="Products"
