@@ -1,36 +1,76 @@
 package com.example.septimatechapp;
 
-import android.content.Context;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
+import android.os.Bundle;
+import android.widget.Toast;
 
-public class multiLane extends BaseAdapter {
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.List;
 
+public class multiLane extends AppCompatActivity {
 
+    RecyclerView recyclerView;
+    List<ModelProducts> postList;
+    ProductAdapter adapterPost;
 
-        private Context MultiContext;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.multi_lane);
 
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
+        GridLayoutManager layoutManager = new GridLayoutManager(multiLane.this, 2);
 
-        @Override
-        public int getCount() {
-            return 0;
-        }
+        //layoutManager.setStackFromEnd(true);
+        //layoutManager.setReverseLayout(true);
 
-        @Override
-        public Object getItem(int position) {
-            return null;
-        }
+        recyclerView.setLayoutManager(layoutManager);
 
-        @Override
-        public long getItemId(int position) {
-            return 0;
-        }
+        postList = new ArrayList<>();
 
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            return null;
-        }
+        loadPosts();
     }
+
+    private void loadPosts() {
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Products/Categories/5-Multi Lane Adjust");
+
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                postList.clear();
+                Toast.makeText(multiLane.this, "test", Toast.LENGTH_SHORT).show();
+
+                for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                    ModelProducts value = ds.getValue(ModelProducts.class);
+                    postList.add(value);
+
+                    adapterPost = new ProductAdapter(multiLane.this, postList);
+                    Toast.makeText(multiLane.this, "test", Toast.LENGTH_SHORT).show();
+
+                    recyclerView.setAdapter(adapterPost);
+                    Toast.makeText(multiLane.this, "check", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                //In case od errorpos
+                Toast.makeText(multiLane.this, "" + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+
+}
+
+
