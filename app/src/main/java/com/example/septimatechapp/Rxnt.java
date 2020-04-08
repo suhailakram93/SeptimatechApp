@@ -83,8 +83,6 @@ public class Rxnt extends AppCompatActivity {
             }
         });
     }
-
-
 }
 
 

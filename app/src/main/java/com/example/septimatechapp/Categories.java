@@ -10,14 +10,22 @@ import android.widget.Toast;
 
 public class Categories extends basicMenu {
 
-    public Button RXNT;
-    String record = "";          //define string variable for record
+    public Button RXNT, FeedScrewDrive;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.categories_main);
         RXNT = (Button) findViewById(R.id.RXNT);
+        FeedScrewDrive = (Button) findViewById(R.id.FeedScrew);
+        FeedScrewDrive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                startActivity(new Intent(getApplicationContext(), feedscrews_drivesystems.class));
+                startActivity(new Intent(Categories.this, feedscrews_drivesystems.class));
+            }
+        });
+
         RXNT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,5 +60,7 @@ public class Categories extends basicMenu {
                 categorymenu.show();
             }
         });
+
+
     }
 }

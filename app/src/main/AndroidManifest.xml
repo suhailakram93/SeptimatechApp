@@ -32,6 +32,33 @@
             android:name=".Rxnt"
             android:label="Rxnt" />
         <activity
+            android:name=".feedscrews_drivesystems"
+            android:label="feedscrews_drivesystems" />
+        <activity
+            android:name=".smart_storage"
+            android:label="Smart Storage" />
+        <activity
+            android:name=".easyAdjustRails"
+            android:label="Easy Adjust Rails" />
+        <activity
+            android:name=".multiLane"
+            android:label="Multi Lane" />
+        <activity
+            android:name=".unisonGuideRails"
+            android:label="unison Guide Rails" />
+        <activity
+            android:name=".unisionAutomation"
+            android:label="unision Automation" />
+        <activity
+            android:name=".unisionCapTrucks"
+            android:label="unision Cap Trucks" />
+        <activity
+            android:name=".Thumbs"
+            android:label="Thumbs" />
+        <activity
+            android:name=".videos"
+            android:label="Videos" />
+        <activity
             android:name=".Categories"
             android:label="Categories"
             android:parentActivityName=".HomePage" />
