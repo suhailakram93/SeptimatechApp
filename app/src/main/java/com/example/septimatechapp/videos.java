@@ -3,70 +3,52 @@ package com.example.septimatechapp;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
+//import com.google.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+//import com.firebase.ui.FirebaseRecyclerAdapter;
 
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class videos extends AppCompatActivity {
 
-    RecyclerView recyclerView;
-    List<ModelProducts> postList;
-    ProductAdapter adapterPost;
-
+    RecyclerView MrecyclerView;
+    FirebaseDatabase database;
+    DatabaseReference reference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.videos);
 
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
-        GridLayoutManager layoutManager = new GridLayoutManager(videos.this, 2);
+        MrecyclerView = findViewById(R.id.recyclerview);
+        MrecyclerView.setHasFixedSize(true);
+        MrecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        recyclerView.setLayoutManager(layoutManager);
-
-        postList = new ArrayList<>();
-
-        loadPosts();
+        database= FirebaseDatabase.getInstance();
+        Toast.makeText(videos.this, "check1", Toast.LENGTH_SHORT).show();
+        reference = FirebaseDatabase.getInstance().getReference("Products/Categories/video");
     }
 
-    private void loadPosts() {
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Products/Categories/Videos");
+    @Override
+    protected void onStart() {
+        super.onStart();
 
-        ref.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                postList.clear();
-                Toast.makeText(videos.this, "test", Toast.LENGTH_SHORT).show();
-
-                for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                    ModelProducts value = ds.getValue(ModelProducts.class);
-                    postList.add(value);
-
-                    adapterPost = new ProductAdapter(videos.this, postList);
-                    Toast.makeText(videos.this, "test", Toast.LENGTH_SHORT).show();
-
-                    recyclerView.setAdapter(adapterPost);
-                    Toast.makeText(videos.this, "check", Toast.LENGTH_SHORT).show();
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                //In case od error position
-                Toast.makeText(videos.this, "" + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
+        FirebaseRecyclerAdapter<memberclass,ViewHolder>firebaseRecyclerAdapter =
+                new FirebaseRecyclerAdapter<memberclass, ViewHolder>(
+                        memberclass.class,
+                        R.layout.row,
+                        ViewHolder.class,
+                        reference
+                ) {
+                    @Override
+                    protected void populateViewHolder(ViewHolder viewHolder, memberclass memberclass, int i) {
+                        viewHolder.setVideo(getApplication(),memberclass.getTitle(),memberclass.getUrl());
+                    }
+                };
+        MrecyclerView.setAdapter(firebaseRecyclerAdapter);
     }
 }
-
-

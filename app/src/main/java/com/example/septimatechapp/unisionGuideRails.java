@@ -33,9 +33,7 @@ public class unisionGuideRails extends AppCompatActivity {
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         GridLayoutManager layoutManager = new GridLayoutManager(unisionGuideRails.this, 2);
-
         recyclerView.setLayoutManager(layoutManager);
-
         postList = new ArrayList<>();
 
         loadPosts();
@@ -55,7 +53,7 @@ public class unisionGuideRails extends AppCompatActivity {
                     postList.add(value);
 
                     adapterPost = new ProductAdapter(unisionGuideRails.this, postList);
-                    Toast.makeText(unisionGuideRails.this, "test", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(unisionGuideRails.this, "Unison Guide Rails", Toast.LENGTH_SHORT).show();
 
                     recyclerView.setAdapter(adapterPost);
                     Toast.makeText(unisionGuideRails.this, "check", Toast.LENGTH_SHORT).show();

@@ -47,7 +47,7 @@ public class multiLane extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 postList.clear();
-                Toast.makeText(multiLane.this, "test", Toast.LENGTH_SHORT).show();
+                Toast.makeText(multiLane.this, "Multi Lane", Toast.LENGTH_SHORT).show();
 
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     ModelProducts value = ds.getValue(ModelProducts.class);

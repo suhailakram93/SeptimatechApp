@@ -59,7 +59,7 @@ public class smart_storage extends AppCompatActivity {
                     postList.add(value);
 
                     adapterPost = new ProductAdapter(smart_storage.this, postList);
-                    Toast.makeText(smart_storage.this, "test", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(smart_storage.this, "Smart Storage", Toast.LENGTH_SHORT).show();
 
                     recyclerView.setAdapter(adapterPost);
                     Toast.makeText(smart_storage.this, "check", Toast.LENGTH_SHORT).show();

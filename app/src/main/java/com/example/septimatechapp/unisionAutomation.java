@@ -52,7 +52,7 @@ public class unisionAutomation extends AppCompatActivity {
                     postList.add(value);
 
                     adapterPost = new ProductAdapter(unisionAutomation.this, postList);
-                    Toast.makeText(unisionAutomation.this, "test", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(unisionAutomation.this, "Unison Automation", Toast.LENGTH_SHORT).show();
 
                     recyclerView.setAdapter(adapterPost);
                     Toast.makeText(unisionAutomation.this, "check", Toast.LENGTH_SHORT).show();

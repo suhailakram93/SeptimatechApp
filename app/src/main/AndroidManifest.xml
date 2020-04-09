@@ -32,6 +32,12 @@
             android:name=".Rxnt"
             android:label="Rxnt" />
         <activity
+            android:name=".LabelHandling"
+            android:label="Label Handling" />
+        <activity
+            android:name=".SpecialApplications"
+            android:label="Special Applications" />
+        <activity
             android:name=".feedscrews_drivesystems"
             android:label="feedscrews_drivesystems" />
         <activity

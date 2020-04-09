@@ -55,7 +55,7 @@ public class Thumbs extends AppCompatActivity {
                     postList.add(value);
 
                     adapterPost = new ProductAdapter(Thumbs.this, postList);
-                    Toast.makeText(Thumbs.this, "test", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Thumbs.this, "Thumbs", Toast.LENGTH_SHORT).show();
 
                     recyclerView.setAdapter(adapterPost);
                     Toast.makeText(Thumbs.this, "check", Toast.LENGTH_SHORT).show();

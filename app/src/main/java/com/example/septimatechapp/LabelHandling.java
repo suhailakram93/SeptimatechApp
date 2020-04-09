@@ -47,7 +47,7 @@ public class LabelHandling extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 postList.clear();
-                Toast.makeText(LabelHandling.this, "test", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LabelHandling.this, "Label Handling", Toast.LENGTH_SHORT).show();
 
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     ModelProducts value = ds.getValue(ModelProducts.class);
