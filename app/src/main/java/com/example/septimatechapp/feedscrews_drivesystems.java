@@ -54,7 +54,7 @@ public class feedscrews_drivesystems extends AppCompatActivity {
                     postList.add(value);
 
                     adapterPost = new ProductAdapter(feedscrews_drivesystems.this, postList);
-                    Toast.makeText(feedscrews_drivesystems.this, "feed Screws & Drive Systems", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(feedscrews_drivesystems.this, "test", Toast.LENGTH_SHORT).show();
 
                     recyclerView.setAdapter(adapterPost);
                     Toast.makeText(feedscrews_drivesystems.this, "check", Toast.LENGTH_SHORT).show();

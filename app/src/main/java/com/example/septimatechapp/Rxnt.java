@@ -69,7 +69,7 @@ public class Rxnt extends AppCompatActivity {
                     postList.add(value);
 
                     adapterPost = new ProductAdapter(Rxnt.this, postList);
-                    Toast.makeText(Rxnt.this, "RXNT", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Rxnt.this, "test", Toast.LENGTH_SHORT).show();
 
                     recyclerView.setAdapter(adapterPost);
                     Toast.makeText(Rxnt.this, "check", Toast.LENGTH_SHORT).show();
