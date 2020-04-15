@@ -130,7 +130,6 @@ public class MainActivity extends AppCompatActivity {
                                         @Override
                                         public void onSuccess(AuthResult authResult) {
                                             startActivity(new Intent(getApplicationContext(), HomePage.class));
-
                                         }
                                     })
                             .addOnFailureListener(
@@ -138,7 +137,6 @@ public class MainActivity extends AppCompatActivity {
                                         @Override
                                         public void onFailure(@NonNull Exception e) {
                                             Toast.makeText(MainActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
-
                                         }
                                     });
                 }
@@ -181,20 +179,16 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (username.getText().toString().equals("c@gmail.com")) {
                             startActivity(new Intent(getApplicationContext(), Adminmain.class));
-
                         } else if (task.isSuccessful()) {
                             startActivity(new Intent(getApplicationContext(), HomePage.class));
-
                         } else {
                             Toast.makeText(MainActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
-
                         }
                     }
                 });
             }
         });
     }
-
 
     private void logIn() {
         Intent signInIntent = logInClient.getSignInIntent();

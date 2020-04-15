@@ -10,9 +10,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
@@ -24,7 +26,6 @@ public class HomePage extends basicMenu {
     ListView lvRss;
     ArrayList<String> titles;
     ArrayList<String> links;
-//    ArrayList<String> pubDate;
 
     //    @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +39,6 @@ public class HomePage extends basicMenu {
         titles = new ArrayList<String>();
 
         links = new ArrayList<String>();
-
-//        pubDate = new ArrayList<String>();
 
         lvRss.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -113,12 +112,6 @@ public class HomePage extends basicMenu {
                                 links.add(xpp.nextText());
                             }
                         }
-//                        else if (xpp.getName().equalsIgnoreCase("pubDate"))
-//                        {
-//                            if (insideItem) {
-//                                pubDate.add(xpp.nextText());
-//                            }
-//                        }
                     } else if (eventType == XmlPullParser.END_TAG && xpp.getName().equalsIgnoreCase("item")) {
                         insideItem = false;
                     }
