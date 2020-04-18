@@ -7,12 +7,19 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class basicMenu extends AppCompatActivity {
     Intent intentCategories, intentAboutUs, intentMain;
+    FirebaseAuth mauth;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {                  //created menu option to go Report and View report
         getMenuInflater().inflate(R.menu.menu_main, menu);
+        mauth = FirebaseAuth.getInstance();
+
+
         intentCategories = new Intent(this, Categories.class);
         intentAboutUs = new Intent(this, AboutUs.class);
         intentMain = new Intent(this, MainActivity.class);
@@ -21,7 +28,7 @@ public class basicMenu extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Toast.makeText(this, "Selected Item:" + item.getTitle(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,  item.getTitle(), Toast.LENGTH_SHORT).show();
 
 
         switch (item.getItemId()) {
@@ -34,11 +41,24 @@ public class basicMenu extends AppCompatActivity {
                 startActivity(intentAboutUs);
                 return false;
             case R.id.logout:
-                startActivity(intentMain);
+                mauth.signOut();
+                checkUserStatus();
+
+                //startActivity(intentMain);
             default:
                 return super.onOptionsItemSelected(item);
         }
 
 
+    } private void checkUserStatus(){
+        FirebaseUser user= mauth.getCurrentUser();
+        if(user!=null){
+            //user signed in
+
+        }
+        else {
+            startActivity(new Intent(basicMenu.this, MainActivity.class));
+            finish();
+        }
     }
 }
