@@ -7,6 +7,51 @@
 
     <include layout="@layout/content_main" />
 
+    <TextView
+        android:id="@+id/editText"
+        android:layout_width="333dp"
+        android:layout_height="337dp"
+        android:layout_above="@+id/buttonL"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical" />
+
+    <Button
+        android:id="@+id/buttonL"
+        android:layout_width="238dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="92dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="36dp"
+        android:text="Learn more about Septimatech"
+        android:background="@color/imgcolor"
+        android:textColor="@color/fontscolor"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="99dp"
+        android:layout_height="21dp"
+        android:layout_above="@+id/editText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="false"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="8dp"
+        android:text="ABOUT US"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/fontscolor" />
 
 
 </RelativeLayout>
