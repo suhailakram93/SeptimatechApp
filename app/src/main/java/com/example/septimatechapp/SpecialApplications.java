@@ -47,17 +47,17 @@ public class SpecialApplications extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 postList.clear();
-                Toast.makeText(SpecialApplications.this, "test", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SpecialApplications.this, "Special Applications", Toast.LENGTH_SHORT).show();
 
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     ModelProducts value = ds.getValue(ModelProducts.class);
                     postList.add(value);
 
                     adapterPost = new ProductAdapter(SpecialApplications.this, postList);
-                    Toast.makeText(SpecialApplications.this, "Special Applications", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(SpecialApplications.this, "Special Applications", Toast.LENGTH_SHORT).show();
 
                     recyclerView.setAdapter(adapterPost);
-                    Toast.makeText(SpecialApplications.this, "check", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(SpecialApplications.this, "check", Toast.LENGTH_SHORT).show();
                 }
             }
 

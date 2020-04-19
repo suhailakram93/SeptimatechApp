@@ -54,10 +54,10 @@ public class LabelHandling extends AppCompatActivity {
                     postList.add(value);
 
                     adapterPost = new ProductAdapter(LabelHandling.this, postList);
-                    Toast.makeText(LabelHandling.this, "test", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(LabelHandling.this, "test", Toast.LENGTH_SHORT).show();
 
                     recyclerView.setAdapter(adapterPost);
-                    Toast.makeText(LabelHandling.this, "check", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(LabelHandling.this, "check", Toast.LENGTH_SHORT).show();
                 }
             }
 

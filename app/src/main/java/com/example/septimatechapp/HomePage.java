@@ -11,6 +11,12 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+<<<<<<< HEAD
+=======
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+>>>>>>> 9dd83ff17c79e4c199c8e307fc8835b6ef3fdae7
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
@@ -26,11 +32,17 @@ public class HomePage extends basicMenu {
     ListView lvRss;
     ArrayList<String> titles;
     ArrayList<String> links;
+<<<<<<< HEAD
+=======
+    FirebaseAuth mauth;
+//    ArrayList<String> pubDate;
+>>>>>>> 9dd83ff17c79e4c199c8e307fc8835b6ef3fdae7
 
     //    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homepage_main);
+
 
         Products = (Button) findViewById(R.id.products);
 
@@ -58,6 +70,7 @@ public class HomePage extends basicMenu {
             }
         });
     }
+
 
     public InputStream getInputStream(URL url) {
         try {

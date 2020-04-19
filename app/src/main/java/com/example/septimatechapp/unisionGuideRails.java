@@ -46,17 +46,17 @@ public class unisionGuideRails extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 postList.clear();
-                Toast.makeText(unisionGuideRails.this, "test", Toast.LENGTH_SHORT).show();
+                Toast.makeText(unisionGuideRails.this, "Unision Guide Rails", Toast.LENGTH_SHORT).show();
 
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     ModelProducts value = ds.getValue(ModelProducts.class);
                     postList.add(value);
 
                     adapterPost = new ProductAdapter(unisionGuideRails.this, postList);
-                    Toast.makeText(unisionGuideRails.this, "Unison Guide Rails", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(unisionGuideRails.this, "Unison Guide Rails", Toast.LENGTH_SHORT).show();
 
                     recyclerView.setAdapter(adapterPost);
-                    Toast.makeText(unisionGuideRails.this, "check", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(unisionGuideRails.this, "check", Toast.LENGTH_SHORT).show();
                 }
             }
 

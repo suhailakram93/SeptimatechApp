@@ -62,17 +62,17 @@ public class Oem extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 postList.clear();
-                Toast.makeText(Oem.this, "test", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Oem.this, "Oem", Toast.LENGTH_SHORT).show();
 
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     ModelProducts value = ds.getValue(ModelProducts.class);
                     postList.add(value);
 
                     adapterPost = new ProductAdapter(Oem.this, postList);
-                    Toast.makeText(Oem.this, "test", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(Oem.this, "test", Toast.LENGTH_SHORT).show();
 
                     recyclerView.setAdapter(adapterPost);
-                    Toast.makeText(Oem.this, "check", Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(Oem.this, "check", Toast.LENGTH_SHORT).show();
                 }
             }
 

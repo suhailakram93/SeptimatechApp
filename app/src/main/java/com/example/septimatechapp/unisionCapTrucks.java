@@ -45,17 +45,17 @@ public class unisionCapTrucks extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 postList.clear();
-                Toast.makeText(unisionCapTrucks.this, "test", Toast.LENGTH_SHORT).show();
+                Toast.makeText(unisionCapTrucks.this, "Unision Cap Trucks", Toast.LENGTH_SHORT).show();
 
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     ModelProducts value = ds.getValue(ModelProducts.class);
                     postList.add(value);
 
                     adapterPost = new ProductAdapter(unisionCapTrucks.this, postList);
-                    Toast.makeText(unisionCapTrucks.this, "Unison Cap Trucks", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(unisionCapTrucks.this, "Unison Cap Trucks", Toast.LENGTH_SHORT).show();
 
                     recyclerView.setAdapter(adapterPost);
-                    Toast.makeText(unisionCapTrucks.this, "check", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(unisionCapTrucks.this, "check", Toast.LENGTH_SHORT).show();
                 }
             }
 
