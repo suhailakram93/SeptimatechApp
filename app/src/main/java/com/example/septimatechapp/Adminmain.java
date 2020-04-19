@@ -11,12 +11,15 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Adminmain extends AppCompatActivity {
-    Button updatemenu;
-    Button del_btn;
+    Button updatemenu, del_btn,logout;
+    FirebaseAuth mAuth;
+
 
 //    DatabaseReference dbreff;
 
@@ -24,11 +27,14 @@ public class Adminmain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adminmain);
+        mAuth = FirebaseAuth.getInstance();
+
 
 //        dbreff = FirebaseDatabase.getInstance();
 
         updatemenu = findViewById(R.id.update);
         del_btn = findViewById(R.id.delete);
+        logout = findViewById(R.id.logout);
         updatemenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {                   //Button redirected to Firebase - Storage
@@ -46,6 +52,13 @@ public class Adminmain extends AppCompatActivity {
                         new Intent("android.intent.action.VIEW",
                                 Uri.parse("https://console.firebase.google.com/u/0/project/septimatech-capstone/database/septimatech-capstone/data"));
                 startActivity(viewIntent);
+            }
+        });
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAuth.signOut();
+                checkUserStatus();
             }
         });
 //        updatemenu.setOnClickListener(new View.OnClickListener() {
@@ -72,5 +85,14 @@ public class Adminmain extends AppCompatActivity {
 //                popupMenu.show();
 //            }
 //        });
-    }
-}
+    }private void checkUserStatus(){
+        FirebaseUser user= mAuth.getCurrentUser();
+        if(user!=null){
+            //user signed in
+
+        }
+        else {
+            startActivity(new Intent(Adminmain.this, MainActivity.class));
+            finish();
+        }}}
+

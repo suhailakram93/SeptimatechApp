@@ -48,8 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnLogin, btnSignUp, btnForgotPaswrd, microbtn;
     EditText username, password;
-    Intent intentH, intentS;
-    ImageButton imageButtonY, imageButtonL, imageButtonF;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -180,9 +179,13 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (username.getText().toString().equals("c@gmail.com")) {
+                            username.setText("");
+                            password.setText("");
                             startActivity(new Intent(getApplicationContext(), Adminmain.class));
 
                         } else if (task.isSuccessful()) {
+                            username.setText("");
+                            password.setText("");
                             startActivity(new Intent(getApplicationContext(), HomePage.class));
 
                         } else {
