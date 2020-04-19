@@ -47,17 +47,17 @@ public class CapHandling extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 postList.clear();
-                Toast.makeText(CapHandling.this, "test", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CapHandling.this, "Cap Handling", Toast.LENGTH_SHORT).show();
 
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     ModelProducts value = ds.getValue(ModelProducts.class);
                     postList.add(value);
 
                     adapterPost = new ProductAdapter(CapHandling.this, postList);
-                    Toast.makeText(CapHandling.this, "test", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(CapHandling.this, "test", Toast.LENGTH_SHORT).show();
 
                     recyclerView.setAdapter(adapterPost);
-                    Toast.makeText(CapHandling.this, "check", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(CapHandling.this, "check", Toast.LENGTH_SHORT).show();
                 }
             }
 

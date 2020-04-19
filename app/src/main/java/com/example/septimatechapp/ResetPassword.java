@@ -36,17 +36,17 @@ public class ResetPassword extends AppCompatActivity {
                 String userEmail = ResetEmail.getText().toString();
 
                 if (TextUtils.isEmpty(userEmail)) {
-                    Toast.makeText(ResetPassword.this, "Please Enter Email Id", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ResetPassword.this, "Please Enter Email", Toast.LENGTH_LONG).show();
                 } else {
                     mAuth.sendPasswordResetEmail(userEmail).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                                Toast.makeText(ResetPassword.this, "Please check your email to reset your password", Toast.LENGTH_LONG).show();
+                                Toast.makeText(ResetPassword.this, "Email sent", Toast.LENGTH_LONG).show();
                                 startActivity(new Intent(ResetPassword.this, MainActivity.class));
                             } else {
                                 String message = task.getException().getMessage();
-                                Toast.makeText(ResetPassword.this, "Error Occured " + message, Toast.LENGTH_LONG).show();
+                                Toast.makeText(ResetPassword.this, "Something went wrong " + message, Toast.LENGTH_LONG).show();
                             }
                         }
                     });

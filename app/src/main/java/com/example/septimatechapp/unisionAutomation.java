@@ -45,17 +45,17 @@ public class unisionAutomation extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 postList.clear();
-                Toast.makeText(unisionAutomation.this, "test", Toast.LENGTH_SHORT).show();
+                Toast.makeText(unisionAutomation.this, "Unision Automation", Toast.LENGTH_SHORT).show();
 
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     ModelProducts value = ds.getValue(ModelProducts.class);
                     postList.add(value);
 
                     adapterPost = new ProductAdapter(unisionAutomation.this, postList);
-                    Toast.makeText(unisionAutomation.this, "Unison Automation", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(unisionAutomation.this, "Unison Automation", Toast.LENGTH_SHORT).show();
 
                     recyclerView.setAdapter(adapterPost);
-                    Toast.makeText(unisionAutomation.this, "check", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(unisionAutomation.this, "check", Toast.LENGTH_SHORT).show();
                 }
             }
 

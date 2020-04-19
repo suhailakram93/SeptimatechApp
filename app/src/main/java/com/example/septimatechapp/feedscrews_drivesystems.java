@@ -47,17 +47,17 @@ public class feedscrews_drivesystems extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 postList.clear();
-                Toast.makeText(feedscrews_drivesystems.this, "test", Toast.LENGTH_SHORT).show();
+                Toast.makeText(feedscrews_drivesystems.this, "Feedscrews Drive Systems", Toast.LENGTH_SHORT).show();
 
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     ModelProducts value = ds.getValue(ModelProducts.class);
                     postList.add(value);
 
                     adapterPost = new ProductAdapter(feedscrews_drivesystems.this, postList);
-                    Toast.makeText(feedscrews_drivesystems.this, "test", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(feedscrews_drivesystems.this, "test", Toast.LENGTH_SHORT).show();
 
                     recyclerView.setAdapter(adapterPost);
-                    Toast.makeText(feedscrews_drivesystems.this, "check", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(feedscrews_drivesystems.this, "check", Toast.LENGTH_SHORT).show();
                 }
             }
 

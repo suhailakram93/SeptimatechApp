@@ -54,10 +54,10 @@ public class multiLane extends AppCompatActivity {
                     postList.add(value);
 
                     adapterPost = new ProductAdapter(multiLane.this, postList);
-                    Toast.makeText(multiLane.this, "test", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(multiLane.this, "test", Toast.LENGTH_SHORT).show();
 
                     recyclerView.setAdapter(adapterPost);
-                    Toast.makeText(multiLane.this, "check", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(multiLane.this, "check", Toast.LENGTH_SHORT).show();
                 }
             }
 

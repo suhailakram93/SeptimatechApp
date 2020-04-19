@@ -49,17 +49,17 @@ public class easyAdjustRails extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 postList.clear();
-                Toast.makeText(easyAdjustRails.this, "test", Toast.LENGTH_SHORT).show();
+                Toast.makeText(easyAdjustRails.this, "Easy Adjust Rails", Toast.LENGTH_SHORT).show();
 
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     ModelProducts value = ds.getValue(ModelProducts.class);
                     postList.add(value);
 
                     adapterPost = new ProductAdapter(easyAdjustRails.this, postList);
-                    Toast.makeText(easyAdjustRails.this, "test", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(easyAdjustRails.this, "test", Toast.LENGTH_SHORT).show();
 
                     recyclerView.setAdapter(adapterPost);
-                    Toast.makeText(easyAdjustRails.this, "check", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(easyAdjustRails.this, "check", Toast.LENGTH_SHORT).show();
                 }
             }
 

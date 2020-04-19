@@ -71,7 +71,7 @@ public class SignUp extends AppCompatActivity {
                                 Toast.makeText(SignUp.this, "User Created", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
                             } else {
-                                Toast.makeText(SignUp.this, "Error Occured", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SignUp.this, "Something went wrong", Toast.LENGTH_SHORT).show();
 
 
                             }

@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 logInClient.signOut();
-                Toast.makeText(MainActivity.this, "You are Logged Out", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Log Out", Toast.LENGTH_SHORT).show();
                 logOutButton.setVisibility(View.INVISIBLE);
             }
         });
@@ -217,7 +217,7 @@ public class MainActivity extends AppCompatActivity {
         try {
 
             GoogleSignInAccount acc = completedTask.getResult(ApiException.class);
-            Toast.makeText(MainActivity.this, "Signed In Successfully", Toast.LENGTH_SHORT).show();
+           // Toast.makeText(MainActivity.this, "Signed In Successfully", Toast.LENGTH_SHORT).show();
             FirebaseGoogleAuth(acc);
         } catch (ApiException e) {
             Toast.makeText(MainActivity.this, "Sign In Failed", Toast.LENGTH_SHORT).show();

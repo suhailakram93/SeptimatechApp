@@ -52,7 +52,7 @@ public class smart_storage extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 postList.clear();
-                Toast.makeText(smart_storage.this, "test", Toast.LENGTH_SHORT).show();
+                Toast.makeText(smart_storage.this, "Smart Storage", Toast.LENGTH_SHORT).show();
 
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     ModelProducts value = ds.getValue(ModelProducts.class);

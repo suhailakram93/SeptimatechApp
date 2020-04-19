@@ -62,7 +62,7 @@ public class Rxnt extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 postList.clear();
-                Toast.makeText(Rxnt.this, "test", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Rxnt.this, "RXNT", Toast.LENGTH_SHORT).show();
 
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     ModelProducts value = ds.getValue(ModelProducts.class);
