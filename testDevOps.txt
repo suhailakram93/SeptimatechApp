@@ -1,1 +1,3 @@
 Test for process Git --> Jenkins
+
+Automation process begin
